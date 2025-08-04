@@ -19,6 +19,8 @@ const { crearActividad, obtenerEstadoPorModulo, getEstadosDisponibles } = requir
 
 const { obtenerActividadesCumplimiento } = require('../controllers/poi.cumplimiento');
 
+const { listarProyectos } = require('../controllers/proyectos.controller');
+
 // Proyectos
 // Rutas para creación y estados
 router.post('/maestro-proyectos', crearProyecto);
@@ -40,6 +42,7 @@ router.get("/actividades/estado-por-modulo/:codigoModulo", obtenerEstadoPorModul
 
 // Cumplimiento
 router.get('/actividades/cumplimiento', obtenerActividadesCumplimiento);
+router.get('/proyectos', listarProyectos);
 
 
 module.exports = router;
