@@ -4,7 +4,7 @@ const app = express();
 
 // Configuración CORS mejorada
 const corsOptions = {
-  origin: 'http://localhost:3000', // Asegúrate que coincida con tu puerto frontend
+  origin: ['http://localhost:3000', 'http://localhost:3002'], // Permitir ambos puertos
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true

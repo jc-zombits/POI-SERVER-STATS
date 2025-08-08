@@ -17,7 +17,7 @@ const { verModulos, verModuloId, actualizarModulo, eliminarModulo } = require('.
 const { crearModulo } = require('../controllers/poi.maestroModulo');
 const { crearActividad, obtenerEstadoPorModulo, getEstadosDisponibles } = require('../controllers/poi.maestroActividad');
 
-const { obtenerActividadesCumplimiento } = require('../controllers/poi.cumplimiento');
+const { obtenerActividadesCumplimiento, actualizarActividadesCumplimiento } = require('../controllers/poi.cumplimiento');
 
 const { listarProyectos } = require('../controllers/proyectos.controller');
 
@@ -42,6 +42,7 @@ router.get("/actividades/estado-por-modulo/:codigoModulo", obtenerEstadoPorModul
 
 // Cumplimiento
 router.get('/actividades/cumplimiento', obtenerActividadesCumplimiento);
+router.put('/actividades/cumplimiento', actualizarActividadesCumplimiento);
 router.get('/proyectos', listarProyectos);
 
 
